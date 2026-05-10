@@ -1,0 +1,205 @@
+{
+  "person": {
+    "name": "Cookies",
+    "headline": "AI 场景化应用与落地实践者",
+    "summary": "具备从 0 到 1 产品设计与全流程运营能力，擅长把 AI 工具转化为真实业务效率。",
+    "roleTargets": [
+      "AI 产品经理",
+      "内容运营",
+      "数据驱动",
+      "教育公益产品"
+    ],
+    "location": "Guangdong, China"
+  },
+  "hero": {
+    "promise": "10 秒看懂我是谁，3 分钟看完最强项目",
+    "proofs": [
+      {
+        "value": "500%",
+        "label": "AI 漫剧产能提效",
+        "projectSlug": "ai-comic"
+      },
+      {
+        "value": "1000+",
+        "label": "广告图日均产出",
+        "projectSlug": "ad-creative"
+      },
+      {
+        "value": "2 周",
+        "label": "独立开发 MeowMind",
+        "projectSlug": "meowmind"
+      }
+    ]
+  },
+  "about": {
+    "education": "广东金融学院 金融学（本科）| GPA 3.7/4.0（院系前 0.2%）",
+    "honors": [
+      "国家奖学金",
+      "CFA 全球投资分析大赛一等奖",
+      "省级创新创业项目立项第一名"
+    ],
+    "traits": [
+      "一人成军 OPC",
+      "AI 工具落地提效",
+      "强共情能力",
+      "市场洞察"
+    ]
+  },
+  "methods": [
+    {
+      "name": "产品端",
+      "steps": [
+        "需求挖掘",
+        "PRD 撰写",
+        "全流程交付",
+        "智能体搭建",
+        "数据复盘",
+        "产品迭代"
+      ]
+    },
+    {
+      "name": "运营端",
+      "steps": [
+        "内容矩阵搭建",
+        "活动策划",
+        "达人合作",
+        "用户增长",
+        "竞品分析"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "ai-comic",
+      "title": "AI 漫剧生成工具",
+      "category": "AI 产品方向",
+      "role": "AI 产品经理实习生",
+      "featured": true,
+      "metric": "团队产能提效 500%"
+    },
+    {
+      "slug": "ad-creative",
+      "title": "广告图文自动化素材平台",
+      "category": "效率工具方向",
+      "role": "AI 产品经理实习生",
+      "featured": true,
+      "metric": "素材生产效率提升 300%"
+    },
+    {
+      "slug": "meowmind",
+      "title": "MeowMind AI 猫语翻译与猫咪生活管理 App",
+      "category": "独立产品方向",
+      "role": "独立产品经理",
+      "featured": true,
+      "metric": "两周完成前后端与部署"
+    },
+    {
+      "slug": "sex-education",
+      "title": "青少年性教育绘本公益项目",
+      "category": "教育公益方向",
+      "role": "项目负责人",
+      "featured": false,
+      "metric": "AI 内容与场景服务结合"
+    },
+    {
+      "slug": "ecommerce-growth",
+      "title": "电商综合服务平台运营",
+      "category": "市场运营方向",
+      "role": "市场运营实习生",
+      "featured": false,
+      "metric": "粉丝增长 1000+，关注率提升 70%"
+    }
+  ],
+  "skills": {
+    "aiTools": [
+      "扣子",
+      "即梦",
+      "Trae",
+      "ChatGPT",
+      "Gemini",
+      "OpenClaw",
+      "Lovart",
+      "Midjourney"
+    ],
+    "software": [
+      "计算机二级",
+      "Excel",
+      "SQL",
+      "WIND 数据库"
+    ],
+    "languages": [
+      "英语（四六级、雅思在读）",
+      "中文（普通话二级甲等）"
+    ],
+    "certificates": [
+      "初级会计证书",
+      "国际人才英语考试中级"
+    ]
+  },
+  "contact": {
+    "wechat": "Wx6wdk",
+    "resume": "Cookies_AI 产品经理_实习简历.pdf"
+  },
+  "showcase": {
+    "intro": "这里会逐步放入视频集、图片集、可交互网页和产品 PRD。面试官可以先看作品，再决定是否展开项目复盘。",
+    "items": [
+      {
+        "id": "video-collection",
+        "type": "video",
+        "title": "AI 漫剧视频集",
+        "summary": "后续上传成片、分镜对比、角色一致性测试和批量生成样例。",
+        "href": "#ai-comic",
+        "projectSlug": "ai-comic",
+        "accent": "lemon",
+        "visual": "star"
+      },
+      {
+        "id": "image-collection",
+        "type": "image",
+        "title": "广告素材图片集",
+        "summary": "后续上传高德、美团、闲鱼等场景的广告图文素材与风格矩阵。",
+        "href": "#ad-creative",
+        "projectSlug": "ad-creative",
+        "accent": "mint",
+        "visual": "heart"
+      },
+      {
+        "id": "prd-library",
+        "type": "prd",
+        "title": "产品 PRD 文章库",
+        "summary": "后续上传需求分析、流程图、交互说明、数据复盘和产品思考文章。",
+        "href": "#projects",
+        "accent": "violet",
+        "visual": "cloud"
+      },
+      {
+        "id": "cloudfront-experiment",
+        "type": "iframe",
+        "title": "AI 互动体验网页",
+        "summary": "可直接嵌入浏览的网页作品，用来展示视觉、交互和完整落地能力。",
+        "src": "https://d2qw3slsk0j2hb.cloudfront.net/",
+        "projectSlug": "meowmind",
+        "accent": "mint",
+        "visual": "cat-paw"
+      },
+      {
+        "id": "playcanvas-clkf99zv",
+        "type": "iframe",
+        "title": "PlayCanvas 互动场景 A",
+        "summary": "轻量 3D/互动内容样例，适合作为作品墙中的沉浸式入口。",
+        "src": "https://playcanv.as/e/p/cLkf99ZV/",
+        "accent": "violet",
+        "visual": "girl-line"
+      },
+      {
+        "id": "playcanvas-xpwotz4f",
+        "type": "iframe",
+        "title": "PlayCanvas 互动场景 B",
+        "summary": "第二个可嵌入互动作品，用来展示更多视觉实验和场景化表达。",
+        "src": "https://playcanv.as/p/XPWoTZ4F/",
+        "accent": "coral",
+        "visual": "dog-head"
+      }
+    ]
+  }
+}
