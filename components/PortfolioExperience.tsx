@@ -116,6 +116,26 @@ function CloudIcon({ className }: { className?: string }) {
   );
 }
 
+function ManLineIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="32" cy="22" r="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M22 18 Q18 8 28 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M42 18 Q46 8 36 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M22 16 Q16 10 22 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M42 16 Q48 10 42 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M26 20 Q29 22 32 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M38 20 Q35 22 32 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M30 26 Q32 28 34 26" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M32 32 L32 52" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M32 38 L20 48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M32 38 L44 48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M32 52 L24 60" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M32 52 L40 60" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function CuteIcon({ visual, className }: { visual: VisualType; className?: string }) {
   const props = { className };
   switch (visual) {
@@ -123,6 +143,8 @@ function CuteIcon({ visual, className }: { visual: VisualType; className?: strin
       return <CatPawIcon {...props} />;
     case "girl-line":
       return <GirlLineIcon {...props} />;
+    case "man-line":
+      return <ManLineIcon {...props} />;
     case "dog-head":
       return <DogHeadIcon {...props} />;
     case "star":
@@ -316,18 +338,26 @@ export function PortfolioExperience({ content }: { content: PortfolioContent }) 
   const showcase = profile.showcase?.items ?? [];
 
   useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const saved = window.localStorage.getItem("cookies-theme") as ThemeKey | null;
     if (saved && themes.some((item) => item.key === saved)) setTheme(saved);
-  }, []);
 
-  useEffect(() => {
-    const root = rootRef.current;
-    if (!root || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (reduced) {
+      root.classList.add("anime-ready");
+      return;
+    }
+
     let active = true;
     const animations: Array<{ cancel?: () => void; pause?: () => void }> = [];
 
     import("animejs").then(({ animate, createTimeline, stagger }) => {
       if (!active) return;
+
+      root.classList.add("anime-ready");
 
       const heroTimeline = createTimeline({ defaults: { ease: "outExpo" } });
       heroTimeline
@@ -542,6 +572,102 @@ export function PortfolioExperience({ content }: { content: PortfolioContent }) 
           delay: stagger(100),
         });
       animations.push(skillsTimeline);
+
+      animations.push(
+        animate(root.querySelectorAll(".signal-tape span"), {
+          translateY: [0, -3, 0],
+          duration: 1800,
+          delay: stagger(200),
+          direction: "alternate",
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".role-tags span"), {
+          scale: [1, 1.06, 0.97],
+          translateY: [0, -2, 0],
+          duration: 2200,
+          delay: stagger(150),
+          direction: "alternate",
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".about-strip > div"), {
+          translateY: [0, -4, 2, 0],
+          duration: 3000,
+          delay: stagger(400),
+          direction: "alternate",
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".cute-main"), {
+          scale: [0.92, 1.08, 0.95],
+          rotate: [0, 5, -3],
+          translateY: [0, -6, 2],
+          duration: 2800,
+          delay: stagger(200),
+          direction: "alternate",
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".cute-mini"), {
+          scale: [0.7, 1.1, 0.8],
+          opacity: [0.5, 1, 0.6],
+          translateX: () => [0, Math.random() > 0.5 ? 10 : -10],
+          translateY: () => [0, Math.random() > 0.5 ? -8 : 8],
+          rotate: [0, 10, -6],
+          duration: 3400,
+          delay: stagger(100),
+          direction: "alternate",
+          loop: true,
+          ease: "inOutQuad",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".primary-action"), {
+          scale: [1, 1.04, 1],
+          boxShadow: [
+            "0 0 0 0 color-mix(in oklch, var(--coral), transparent 70%)",
+            "0 0 0 8px color-mix(in oklch, var(--coral), transparent 90%)",
+            "0 0 0 0 color-mix(in oklch, var(--coral), transparent 70%)",
+          ],
+          duration: 2400,
+          direction: "alternate",
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".hero-title"), {
+          letterSpacing: ["-0.035em", "-0.02em", "-0.035em"],
+          duration: 6000,
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
+
+      animations.push(
+        animate(root.querySelectorAll(".showcase-entry-cta .primary-action"), {
+          translateY: [0, -3, 0],
+          duration: 2000,
+          direction: "alternate",
+          loop: true,
+          ease: "inOutSine",
+        }),
+      );
     });
 
     return () => {

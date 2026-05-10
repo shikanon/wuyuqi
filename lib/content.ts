@@ -19,7 +19,7 @@ export type ShowcaseItem = {
   href?: string;
   projectSlug?: string;
   accent?: string;
-  visual?: "cat-paw" | "girl-line" | "dog-head" | "star" | "heart" | "cloud";
+  visual?: "cat-paw" | "girl-line" | "man-line" | "dog-head" | "star" | "heart" | "cloud";
 };
 
 export type ProfileData = {

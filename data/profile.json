@@ -151,7 +151,7 @@
         "href": "#ai-comic",
         "projectSlug": "ai-comic",
         "accent": "lemon",
-        "visual": "star"
+        "visual": "cat-paw"
       },
       {
         "id": "image-collection",
@@ -161,7 +161,7 @@
         "href": "#ad-creative",
         "projectSlug": "ad-creative",
         "accent": "mint",
-        "visual": "heart"
+        "visual": "girl-line"
       },
       {
         "id": "prd-library",
@@ -170,7 +170,7 @@
         "summary": "后续上传需求分析、流程图、交互说明、数据复盘和产品思考文章。",
         "href": "#projects",
         "accent": "violet",
-        "visual": "cloud"
+        "visual": "man-line"
       },
       {
         "id": "cloudfront-experiment",

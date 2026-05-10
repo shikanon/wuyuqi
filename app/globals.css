@@ -6,6 +6,32 @@ html {
   scroll-behavior: smooth;
 }
 
+html[data-theme="night"] .site-shell,
+.theme-night {
+  --ink: oklch(93% 0.025 310);
+  --muted-ink: oklch(68% 0.055 310);
+  --paper: oklch(16% 0.04 305);
+  --paper-2: oklch(22% 0.05 305);
+  --panel: oklch(13% 0.035 305);
+  --coral: oklch(72% 0.2 22);
+  --mint: oklch(78% 0.17 160);
+  --violet: oklch(68% 0.22 305);
+  --lemon: oklch(85% 0.16 95);
+}
+
+html[data-theme="playbook"] .site-shell,
+.theme-playbook {
+  --ink: oklch(18% 0.06 60);
+  --muted-ink: oklch(40% 0.06 60);
+  --paper: oklch(96% 0.025 80);
+  --paper-2: oklch(91% 0.04 80);
+  --panel: oklch(98% 0.015 80);
+  --coral: oklch(68% 0.2 22);
+  --mint: oklch(72% 0.16 160);
+  --violet: oklch(58% 0.2 305);
+  --lemon: oklch(86% 0.17 95);
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
@@ -71,6 +97,26 @@ button {
     var(--paper);
   color: var(--ink);
   transition: background 360ms ease, color 260ms ease;
+}
+
+[data-hero-reveal],
+.proof-row,
+.feature-card,
+.mini-case,
+.method-map article,
+.skills-section div,
+.contact-section > div:not(.contact-stroke-wrap) {
+  opacity: 0;
+}
+
+.site-shell.anime-ready [data-hero-reveal],
+.site-shell.anime-ready .proof-row,
+.site-shell.anime-ready .feature-card,
+.site-shell.anime-ready .mini-case,
+.site-shell.anime-ready .method-map article,
+.site-shell.anime-ready .skills-section div,
+.site-shell.anime-ready .contact-section > div:not(.contact-stroke-wrap) {
+  opacity: 1;
 }
 
 .site-shell::before {
